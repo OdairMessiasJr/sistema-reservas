@@ -17,7 +17,7 @@ export function AuthProvider({ children }) {
 
             if (response.ok) {
                 setIsAdmin(true);
-                router.push('/'); // Redireciona para a home após o login
+                router.push('/'); 
                 return true;
             } else {
                 setIsAdmin(false);
