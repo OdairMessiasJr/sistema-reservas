@@ -4,15 +4,32 @@
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Isso empurra a logo para a esquerda e os links para a direita */
     align-items: center;
 }
 
 .brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #0070f3;
+    display: flex;
+    align-items: center;
+    /* Adicionado para garantir que a logo não seja esmagada */
+    flex-shrink: 0;
 }
+
+/* ===== NOVO ESTILO PARA O TÍTULO ===== */
+.title {
+    /* Ocupa o espaço disponível e centraliza o texto dentro dele */
+    flex-grow: 1;
+    text-align: center;
+    color: #c00; /* Cor vermelha do SENAI */
+}
+
+.title h1 {
+    margin: 0;
+    font-size: 1.8rem; /* Tamanho da fonte ajustável */
+    font-weight: 700;
+}
+/* ===== FIM DO NOVO ESTILO ===== */
+
 
 .navList {
     list-style: none;
@@ -20,17 +37,23 @@
     gap: 1.5rem;
     margin: 0;
     padding: 0;
+    align-items: center; /* Alinha verticalmente os links */
+     /* Adicionado para garantir que os links não sejam esmagados */
+    flex-shrink: 0;
 }
 
 .navList a {
     font-size: 1rem;
     color: #555;
     transition: color 0.2s ease-in-out;
+    white-space: nowrap; /* Impede que os links quebrem linha */
 }
 
 .navList a:hover {
     color: #0070f3;
 }
+
+/* ... (O restante dos seus estilos, como .authButton e .loginLink, continuam os mesmos) ... */
 .authButton {
     background-color: #dc3545;
     color: white;
