@@ -1,4 +1,6 @@
-import Navbar from './Navbar';
+// Em components/Layout.js
+
+import Navbar from './Navbar'; // Corrija para ter o "N" maiúsculo
 
 export default function Layout({ children }) {
   return (
